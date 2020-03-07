@@ -1,0 +1,4 @@
+if the obj object has more than 1000k vertices,use the build-in obj importer will be very slow sometimes take half an hour since it is written with python.
+I written this OBJ importer using C++ code.it is a lot faster than the python implement.
+although it not be optimized with code. I will continue improve the speed of import in the next version.
+there is no exporter currently , but will make it.
