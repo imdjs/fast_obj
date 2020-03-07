@@ -1,0 +1,249 @@
+﻿
+
+// #undef __PRINT__ //●● 这个必须 CLIB64db.lib 编译时也 #undef __PRINT__ 
+// #define __PRINT__
+// #define __PRINT_STL__
+    // #define _STL_ASSERT_
+    // #undef _STL_STOP_
+#define _PRAGMA_MG_
+
+#pragma warning(disable:4101 4003  4005  4190 4996  4313  4062  4838 4477 4002)
+#define __BLENDER28__
+// #define __PRINT_TIME__
+
+// #define _STL_STOP_
+// #define __LEAK__
+// #define _PT_LEAK_
+
+// #define _PRINT_HEAD_
+// #define _PRINT_HEAD_LIB_
+
+// #define _PRINT_DRAW_LIB_
+
+//----false--------------------------
+#define DJS   false
+#define DJS数学    false
+#define DJS画    false
+#define DJSalg    false
+#define CLIB   false
+#define CLIBmesh   false
+#define CLIBcurve    false
+#define CLIB父子    false
+#define CLIB视    false
+
+#define IOOBJ    false
+#define MESH_TOOL乚    false
+// ----true--------------------------
+// #define DJS    true
+// #define DJS数学    true
+// #define DJS画    true
+// #define DJSalg    true
+// #define CLIB    true
+// #define CLIBmesh    true
+// #define CLIBcurve    true
+// #define CLIB父子    true
+// #define CLIB视    true
+
+// #define IOOBJ    true
+// #define MESH_TOOL乚    true
+
+#define  _ATL_ALLOW_CHAR_UNSIGNED
+// ------------------------------
+#define MODE圆    0
+#define MODE～    1
+//==============================
+#include <Windows.h>
+#include <atlimage.h>
+//------------------------------
+#include "DJS_define.h"  
+#include "DJS_typedef.h" 
+
+#include "global\DJS_global_var.h"
+//------------------------------
+// #include "MallocFree.h"
+// #include"math\MatQuatVec.h"
+//#include "math\List.cpp"//■■暂时无用
+#include"transform\DJS_transform.h"//Swap(),二() ●必须放在前面
+//----print--------------------------
+#include"print\DJS0_print.h"
+#include"string\DJS_string.h"
+//----STL--------------------------
+#include"STL\Bool.h"
+#include"STL\DJS_STL.h"//Δset最后1个名()
+#include"STL\DJS_STL_size.h"//Add()
+#include"STL\DJS_STL_find.h"
+#include"STL\Bool_const.h"
+
+#include"print\DJS_print.h"
+
+
+//----math--------------------------
+#include"math\DJS_math.h"//链接规范与“BLI_system_backtrace”的早期规范冲突
+#include"math\math查300.h"
+
+#include<画画\画画.h>
+
+//----algorithm--------------------------
+// #include<algorithm\DJS_algorithm.h>
+#include<algorithm\DJS_algorithm_stl.h>
+
+#include"math\DJS_math_v.h"
+#include"math\MatQuatVecMath.h"
+
+#include"math\DJS_math_q.h"
+
+#include"math\DJS_math_m.h"//★★这个当  #undef __PRINT__  时出错
+
+#include"math\MatQuatVec_G.cpp"
+// #include"math\MatQuatVec.cpp"
+// #include"math\F3F4F44.cpp"
+// #include"math\psr.h"
+#include"math\DJS_math_贝兹3.h"
+#include"math\DJS_math_线.h"
+// #include"math\DJS_math_多边形.h"
+
+
+//----win--------------------------
+#include"win\win.h"
+#include"win\文件\file.cpp"
+// #include"win\网页.h"
+
+
+// #include<画画\画囗.h>
+
+// #include<画画\画～.h>
+// #include<画画\画画.cpp>
+
+////CLIB//////////////////////////////////////
+
+#include<所有include.h>
+#include "CLIB_define.h"  
+#include"CLIB_H\CLIB0_class.h"
+
+//----string--------------------------
+#include"string\CLIB_string.h"
+// #include"print\CLIB_print.h"
+
+//----blenkernel--------------------------
+#include"blender\depsgraph\depsgraph_wm.h"
+
+//----object--------------------------
+#include"blender\blenkernel\context_MY.h"
+#include"blender\blenkernel\context0.h"
+//----prop--------------------------
+#include"属性\CLIB_属性.h"
+//----global--------------------------
+#include "global\CLIB_global_var.h"
+#include "global\CLIB_global.h"
+//----object--------------------------
+#include "object\CLIB_object.h"
+#include"blender\blenkernel\scene0.h"
+// #include"object\CLIB_object_parent.h "
+// #include"object\CLIB_object_motion.h "
+// #include"curve\CLIB_curve.h"
+
+//----mesh--------------------------
+#include"mesh\CLIB_mesh.h"//链接规范与“BLI_system_backtrace”的早期规范冲突
+#include "mesh\CLIB_mesh集.h"
+#include "mesh\CLIB_mesh_math.h"
+#include "mesh\CLIB_mesh选.h"
+#include "mesh\CLIB_mesh属性.h"
+#include"mesh\CLIB_mesh_shape.h"
+
+#include"material\CLIB_material.h"
+
+#ifdef __LIBdb__
+    #pragma comment( lib,"CLIB64db.lib")
+    #else
+        #pragma comment( lib,"CLIB64.lib")
+#endif
+
+
+
+EXC 联 void Δtestdll()
+    {
+    // VECTOR(int,Vi);
+    vector<int>Vi;
+    printf("Vi[1]= %d\n",Vi[1]);
+    printf("『『『 %s \n",s巜charU(__func__));
+
+    PRINT0(str--------------------------);
+    }
+
+////G///////////////////////////////////////
+
+const struct 卍OBJ_COLOR
+    {
+    GLfloat red, green, blue;
+    卍OBJ_COLOR() : red(1.0), green(1.0), blue(1.0) {}
+    }卍OBJ_COLOR;
+
+
+bool b渲染模式G; // true = solid body, false = wireframe
+
+const float ZOOM_SPEED = 0.5f;
+const float ROTATE_SPEED = 0.2f;
+float  冖冖 = 40.0f;
+int  ξ物vG=0,ξ物G=0,ξ点G=0,ξ环总G=0,ξ面G=0,i点数总G=0,i面数总G=0;
+
+bool b第1次遇vG=false,b第1次遇其它G=true,
+bg在o前G=false,
+b是连续vG=false,//不连续如:v vt vn v vt vn
+b是负索引G=false,//负索引如:f -11/-11,-12/-12,-13/-13 
+b是v后6个数G=false;//如:v 12.0 23.3 45.6 123 456 789 
+
+VECTOR(ushort,V物序b第1个vtG);VECTOR(string,V物序str组G);
+VBOOL(VB物序b有uvG);VBOOL(VB物序b有法线G);VBOOL(VB物序b不用累减索引G);VBOOL(VB物序b是负索引G);
+VBOOL(VB物序b有坏数据G);
+//----------------------------------------
+DEQUE(string,Q物序str物名G);
+DEQUE(int,Q物序i点数G);DEQUE(int,Q物序i环数G);DEQUE(int,Q物序i面数G);DEQUE(deque<int>,Q物序Q面序i面点数G);DEQUE(deque<int>,Q物序Q材质序s名G);
+
+DEQUE(vector<卍Vector>,Q物序V点序丅TMP);VECTOR(vector<卍Vector>,V物序V点序丅G);
+//DEQUE(deque<deque<int>>,Q物序Q面序Q4ξ序面点G);
+VECTOR(vector<卍Vector>,V物序V序uvG);//● 如果不是负索引,就不是点序,否则是点序
+// VECTOR(卍Vector,V环序uv总G);//这是给没有负索引的全局uv索引
+DEQUE(vector<vector<int>>,Q物序V面序V4ξ序面点TMP);VECTOR(vector<vector<int>>,V物序V面序V4ξ序面点G);VECTOR(vector<vector<int>>,V物序V面序V4ξ面边G);VECTOR(vector<vector<int>>,V物序V边序V2ξ边点G);
+
+DEQUE(vector<vector<int>>,Q物序V面序Vξ环thisTMP);VECTOR(vector<vector<int>>,V物序V面序Vξ环thisG);
+DEQUE(vector<vector<卍Vector>>,Q物序V面序Vuv环序TMP);VECTOR(vector<vector<卍Vector>>,V物序V面序Vuv环序G);
+
+VECTOR(vector<vector<int>>,V物序V面序Vξ材质G);
+卍Vector 丅G;
+
+VECTOR(int,Vnξ面G);VECTOR(int,Vnξ环G);
+//deque<deque<int>> Q物序Q面序Q4ξ序面点G;
+//==============================
+__forceinline void Δ灬QG()
+    {
+    Q物序i点数G.clear();Q物序i环数G.clear();Q物序i面数G.clear();
+    Q物序Q面序i面点数G.clear();//Q物序str物名G.clear();
+    }
+__forceinline void Δ凵裂G()
+    {
+    Swap(V物序V面序V4ξ序面点G);Swap(V物序V面序Vξ环thisG);
+    Swap(V物序V点序丅G);
+    }
+__forceinline void Δ凵裂G(匚int i物序)
+    {
+    Swap(V物序V面序V4ξ序面点G[i物序]);Swap(V物序V面序Vξ环thisG[i物序]);
+    Swap(V物序V点序丅G[i物序]);
+    }    
+    
+__forceinline void Δ凵合G()
+    {
+    Swap(V点序丅G);Swap(V面序V4ξ序面点G);Swap(V面序V4ξ面边G);Swap(V边序V2ξ边点G);
+    
+    }
+    
+__forceinline void Δ灬G()
+    {
+    Q物序i点数G.clear();Q物序i环数G.clear();Q物序i面数G.clear();Q物序Q面序i面点数G.clear();Q物序str物名G.clear();V物序str组G.clear();
+    VB物序b有uvG.〇();VB物序b有坏数据G.〇();VB物序b有法线G.〇();VB物序b是负索引G.〇();
+    V物序V面序V4ξ序面点G.clear();V物序V面序V4ξ面边G.clear();V物序V边序V2ξ边点G.clear();
+    
+   V物序V面序Vξ环thisG.clear();V物序V面序Vuv环序G.clear();
+    }
+
+#include"obj_I.cpp"
+#include"obj_O.cpp"
